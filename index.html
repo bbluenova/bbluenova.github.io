@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guess The Number 🎯</title>
+
+    <!-- Browser Tab Logo -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- Game Logo -->
+        <img src="logo.png" alt="Guess The Number Logo" class="game-logo">
+
+        <h1>
+            🎯 Guess The Number
+        </h1>
+
+        <p class="subtitle">
+            Guess a number between 1 and 100
+        </p>
+
+        <div class="game-box">
+
+            <h2>
+                Can You Find It? 🤔
+            </h2>
+
+            <input
+                type="number"
+                id="guessInput"
+                placeholder="Enter your guess">
+
+            <button id="guessBtn">
+                🎯 Guess
+            </button>
+
+            <div class="message-box">
+
+                <p id="message">
+                    Start guessing! 😎
+                </p>
+
+            </div>
+
+            <div class="score-area">
+
+                <div>
+
+                    <p>Attempts</p>
+                    <span id="attempts">0</span>
+
+                </div>
+
+                <div>
+
+                    <p>Score</p>
+                    <span id="score">100</span>
+
+                </div>
+
+            </div>
+
+            <button id="restartBtn">
+                🔄 Play Again
+            </button>
+
+        </div>
+
+        <!-- AdSense Space -->
+        <div class="ad-space">
+            Advertisement
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,518 @@
+/* ===============================
+   BASIC SETTINGS
+================================ */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b3d2e,
+        #2e8b57,
+        #dfff00
+    );
+
+
+    color:white;
+
+}
+
+
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+
+
+.game-container{
+
+    width:90%;
+
+    max-width:450px;
+
+    text-align:center;
+
+}
+
+
+
+/* ===============================
+   TITLE
+================================ */
+
+
+h1{
+
+    font-size:40px;
+
+    color:#fff700;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.subtitle{
+
+    color:#f5ffd6;
+
+    font-size:17px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* ===============================
+   GAME CARD
+================================ */
+
+
+.game-box{
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    padding:30px;
+
+    border-radius:30px;
+
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* ===============================
+   HEADING
+================================ */
+
+
+.game-box h2{
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+
+
+/* ===============================
+   INPUT
+================================ */
+
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:25px;
+
+    font-size:18px;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* ===============================
+   BUTTONS
+================================ */
+
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ffd700;
+
+    color:#164b32;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+    background:#fff700;
+
+}
+
+
+
+button:disabled{
+
+    background:#777;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+
+/* ===============================
+   MESSAGE
+================================ */
+
+
+.message-box{
+
+    margin:25px 0;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    background:rgba(0,0,0,0.15);
+
+}
+
+
+
+#message{
+
+    color:#fff700;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* ===============================
+   SCORE AREA
+================================ */
+
+
+.score-area{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    margin:20px 0;
+
+}
+
+
+
+.score-area div{
+
+    background:rgba(255,255,255,0.15);
+
+    padding:15px;
+
+    border-radius:20px;
+
+    width:45%;
+
+}
+
+
+
+.score-area span{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:25px;
+
+    color:#fff700;
+
+    font-weight:bold;
+
+}
+
+
+
+/* ===============================
+   PLAY AGAIN BUTTON
+================================ */
+
+
+#restartBtn{
+
+    background:#bfff00;
+
+    margin-top:10px;
+
+}
+
+
+
+/* ===============================
+   ADMOB AREA
+================================ */
+
+
+.ad-space{
+
+    margin-top:25px;
+
+    height:60px;
+
+    background:rgba(0,0,0,0.2);
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff700;
+
+}
+
+
+
+/* ===============================
+   MOBILE DESIGN
+================================ */
+
+
+@media(max-width:600px){
+
+
+    h1{
+
+        font-size:32px;
+
+    }
+
+
+    .game-box{
+
+        padding:20px;
+
+    }
+
+
+}
+/* ===============================
+   GAME ANIMATIONS
+================================ */
+
+
+/* Game card entrance */
+
+.game-box{
+
+    animation: popIn 0.8s ease;
+
+}
+
+
+@keyframes popIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(0.7) translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1) translateY(0);
+
+    }
+
+}
+
+
+
+/* Title glowing effect */
+
+h1{
+
+    animation: glow 2s infinite alternate;
+
+}
+
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:0 0 10px #fff700;
+
+    }
+
+
+    to{
+
+        text-shadow:
+        0 0 20px #fff700,
+        0 0 40px #ffd700;
+
+    }
+
+}
+
+
+
+/* Button attractive animation */
+
+button{
+
+    animation: floatButton 2s infinite;
+
+}
+
+
+
+@keyframes floatButton{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* Score cards hover */
+
+.score-area div{
+
+    transition:0.4s;
+
+}
+
+
+
+.score-area div:hover{
+
+    transform:scale(1.1) rotate(2deg);
+
+    background:rgba(255,215,0,0.25);
+
+}
+
+
+
+/* Input focus effect */
+
+input:focus{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px #fff700;
+
+    transition:0.3s;
+
+}
+
+
+
+/* Message animation */
+
+#message{
+
+    animation: messageMove 1s infinite alternate;
+
+}
+
+
+
+@keyframes messageMove{
+
+    from{
+
+        transform:translateX(-5px);
+
+    }
+
+
+    to{
+
+        transform:translateX(5px);
+
+    }
+
+}
+.game-logo{
+    width:170px;
+    height:auto;
+    display:block;
+    margin:20px auto 15px;
+    border-radius:20px;
+}
